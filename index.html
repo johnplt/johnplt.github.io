@@ -98,11 +98,46 @@
                     </div>
 
                     <div class="pt-2 flex gap-4 text-sm font-medium">
-                        <a href="https://cinemind-production-1a7d.up.railway.app/ target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">
+                        <a href="https://cinemind-production-1a7d.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">
                             Découvrir l'application &rarr;
                         </a>
                         <a href="https://github.com/johnplt/cinemind" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">
                             Voir le code sur GitHub &rarr;
+                        </a>
+                    </div>
+                </article>
+                <!-- StreamChat NLP Card -->
+                <article class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-brand-500/50 transition space-y-6">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <h3 class="text-xl font-bold text-white">StreamChat NLP — Classification Multilingue Temps Réel & Batch</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Python / uv</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Sentence-Transformers</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">dbt / DuckDB</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Streamlit / Railway</span>
+                        </div>
+                    </div>
+                
+                    <p class="text-slate-300 leading-relaxed text-sm">
+                        Plateforme MLOps permettant de catégoriser automatiquement des messages clients dans plus de 50 langues. Conçue pour offrir un routage instantané (< 30 ms) sur CPU, sans la latence ni les coûts des gros modèles de langage (LLMs).
+                    </p>
+                
+                    <div class="space-y-3 text-sm text-slate-400">
+                        <p class="font-semibold text-slate-200">Points clés de l'architecture :</p>
+                        <ul class="list-disc list-inside space-y-1.5 pl-2">
+                            <li><strong>Classification Zero-Shot :</strong> Modèle multilingue léger (<code>MiniLM-L12</code>) permettant d'ajouter ou modifier les catégories métiers à la volée sans aucun ré-entraînement.</li>
+                            <li><strong>Architecture Hybride (Batch & Online) :</strong> Mode temps réel pour les messages unitaires et pipeline <strong>dbt / DuckDB</strong> pour l'assainissement et la déduplication de volumes historiques.</li>
+                            <li><strong>Pragmatique & Économique :</strong> Alternative sobre et rapide à l'appel d'APIs LLM payantes, avec un temps de réponse garanti sous le SLA de 500 ms.</li>
+                            <li><strong>Industrialisation Modernisée :</strong> Environnement géré via <strong><code>uv</code></strong> (Rust-based packaging), conteneurisation Docker et CI/CD automatisée sous GitHub Actions.</li>
+                        </ul>
+                    </div>
+                
+                    <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
+                        <a href="https://streamchatnlp-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">
+                            Démo en ligne (Railway) &rarr;
+                        </a>
+                        <a href="https://github.com/johnplt/stream_chat_nlp" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white flex items-center gap-1">
+                            Code source GitHub &rarr;
                         </a>
                     </div>
                 </article>
