@@ -119,19 +119,18 @@
                     </div>
                 
                     <p class="text-slate-300 leading-relaxed text-sm">
-                        Plateforme MLOps permettant de catégoriser automatiquement des messages clients dans plus de 50 langues. Conçue pour offrir un routage instantané (< 30 ms) sur CPU, sans la latence ni les coûts des gros modèles de langage (LLMs).
+                        Plateforme MLOps permettant de catégoriser automatiquement des messages clients dans plus de 50 langues. Conçue pour offrir un traitement rapide et léger sur CPU, sans la latence ni les coûts des gros modèles de langage (LLMs).
                     </p>
-                
+                    
                     <div class="space-y-3 text-sm text-slate-400">
                         <p class="font-semibold text-slate-200">Points clés de l'architecture :</p>
                         <ul class="list-disc list-inside space-y-1.5 pl-2">
                             <li><strong>Classification Zero-Shot :</strong> Modèle multilingue léger (<code>MiniLM-L12</code>) permettant d'ajouter ou modifier les catégories métiers à la volée sans aucun ré-entraînement.</li>
                             <li><strong>Architecture Hybride (Batch & Online) :</strong> Mode temps réel pour les messages unitaires et pipeline <strong>dbt / DuckDB</strong> pour l'assainissement et la déduplication de volumes historiques.</li>
-                            <li><strong>Pragmatique & Économique :</strong> Alternative sobre et rapide à l'appel d'APIs LLM payantes, avec un temps de réponse garanti sous le SLA de 500 ms.</li>
+                            <li><strong>Pragmatique & Économique :</strong> Alternative sobre aux APIs LLM payantes, optimisée pour minimiser les coûts d'infrastructure et l'empreinte carbone.</li>
                             <li><strong>Industrialisation Modernisée :</strong> Environnement géré via <strong><code>uv</code></strong> (Rust-based packaging), conteneurisation Docker et CI/CD automatisée sous GitHub Actions.</li>
                         </ul>
-                    </div>
-                
+                    </div>                
                     <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
                         <a href="https://streamchatnlp-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">
                             Démo en ligne (Railway) &rarr;
