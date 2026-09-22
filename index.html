@@ -69,6 +69,15 @@
             <div class="border-b border-slate-800 pb-4">
                 <h2 class="text-2xl font-bold text-white">Projets phares</h2>
             </div>
+            <!-- En-tête / Pitch de présentation du Portfolio -->
+            <div class="mb-12 p-8 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-800/80 to-slate-900 border border-brand-500/30 shadow-xl space-y-4">
+                <p class="text-lg font-semibold text-white leading-relaxed">
+                    « Ces projets sont nés d'une volonté simple : expérimenter l'IA appliquée à des problèmes du quotidien, en concevant des architectures légères, utiles et directement déployables. »
+                </p>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    Chaque application explore un cas d'usage concret où la donnée apporte une valeur mesurable — qu'il s'agisse d'améliorer le service client sans surcoût (<strong>StreamChat NLP</strong>), d'aider à la prise de décision budgétaire en période de sobriété (<strong>DriveLocal</strong>), ou de fluidifier l'accès à la culture par la recommandation sémantique (<strong>CineMind</strong>). L'objectif : associer rigueur technique, maîtrise des coûts et sobriété numérique.
+                </p>
+            </div>
 
             <div class="grid grid-cols-1 gap-8">
                 <!-- CineMind Project Card -->
@@ -136,6 +145,41 @@
                             Démo en ligne (Railway) &rarr;
                         </a>
                         <a href="https://github.com/johnplt/stream_chat_nlp" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white flex items-center gap-1">
+                            Code source GitHub &rarr;
+                        </a>
+                    </div>
+                </article>
+                <!-- DriveLocal Project Card -->
+                <article class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-brand-500/50 transition space-y-6">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <h3 class="text-xl font-bold text-white">DriveLocal — Agent IA d'Arbitrage & Recherche Sémantique SaaS</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Python / uv</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">FastAPI</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">PostgreSQL / pgvector</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Streamlit / Docker</span>
+                        </div>
+                    </div>
+                
+                    <p class="text-slate-300 leading-relaxed text-sm">
+                        Plateforme SaaS de recherche de véhicules de location permettant d'aligner les intentions exprimées en langage naturel avec les contraintes budgétaires réelles. Un agent d'arbitrage ajuste dynamiquement les options de réservation en cas de dépassement.
+                    </p>
+                
+                    <div class="space-y-3 text-sm text-slate-400">
+                        <p class="font-semibold text-slate-200">Points clés de l'architecture :</p>
+                        <ul class="list-disc list-inside space-y-1.5 pl-2">
+                            <li><strong>Recherche Vectorielle Multilingue :</strong> Embeddings <code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-brand-500">MiniLM-L12</code> couplés à <code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-brand-500">pgvector</code> pour apparier les besoins clients avec la flotte disponible.</li>
+                            <li><strong>Moteur d'Arbitrage Métier :</strong> Logique décisionnelle embarquée analysant l'écart budgétaire pour proposer automatiquement des alternatives économiques (retrait d'options, surclassement négocié).</li>
+                            <li><strong>Architecture Microservices :</strong> Découplage complet API (FastAPI) et Frontend (Streamlit) conteneurisés indépendamment sous Docker.</li>
+                            <li><strong>Déploiement Cloud & Auto-Seeding :</strong> Pipeline hébergé sur Railway avec initialisation automatique du schéma SQL et injection des embeddings au démarrage.</li>
+                        </ul>
+                    </div>
+                
+                    <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
+                        <a href="https://drivelocal-agent-ui-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">
+                            Démo en ligne (Railway) &rarr;
+                        </a>
+                        <a href="https://github.com/johnplt/drivelocal-agent.git" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white flex items-center gap-1">
                             Code source GitHub &rarr;
                         </a>
                     </div>
