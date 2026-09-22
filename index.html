@@ -117,15 +117,6 @@
                             </div>
                         </button>
                     </div>
-
-                    <div class="pt-2 flex gap-4 text-sm font-medium">
-                        <a href="https://cinemind-production-1a7d.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">
-                            Découvrir l'application &rarr;
-                        </a>
-                        <a href="https://github.com/johnplt/cinemind" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">
-                            Voir le code sur GitHub &rarr;
-                        </a>
-                    </div>
                     <!-- MODALE POPUP (Masquée par défaut) -->
                     <div id="modal-cinemind" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6" onclick="closeModal('modal-cinemind')">
                         <div class="max-w-5xl w-full bg-slate-900 border border-slate-700/80 rounded-2xl p-3 sm:p-4 relative shadow-2xl space-y-3" onclick="event.stopPropagation()">
@@ -135,6 +126,14 @@
                             </div>
                             <img src="img/cinemind_image.jpg" alt="Schéma d'architecture Cinemind" class="w-full h-auto rounded-xl border border-slate-800" />
                         </div>
+                    </div>
+                    <div class="pt-2 flex gap-4 text-sm font-medium">
+                        <a href="https://cinemind-production-1a7d.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">
+                            Découvrir l'application &rarr;
+                        </a>
+                        <a href="https://github.com/johnplt/cinemind" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">
+                            Voir le code sur GitHub &rarr;
+                        </a>
                     </div>
                 </article>
                 <!-- StreamChat NLP Card -->
@@ -208,15 +207,6 @@
                             </div>
                         </button>
                     </div>
-                
-                    <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
-                        <a href="https://drivelocal-agent-ui-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">
-                            Démo en ligne (Railway) &rarr;
-                        </a>
-                        <a href="https://github.com/johnplt/drivelocal-agent.git" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white flex items-center gap-1">
-                            Code source GitHub &rarr;
-                        </a>
-                    </div>
                     <!-- MODALE POPUP (Masquée par défaut) -->
                     <div id="modal-drivelocal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6" onclick="closeModal('modal-drivelocal')">
                         <div class="max-w-5xl w-full bg-slate-900 border border-slate-700/80 rounded-2xl p-3 sm:p-4 relative shadow-2xl space-y-3" onclick="event.stopPropagation()">
@@ -226,6 +216,14 @@
                             </div>
                             <img src="img/drivelocal_image.jpg" alt="Schéma d'architecture DriveLocal" class="w-full h-auto rounded-xl border border-slate-800" />
                         </div>
+                    </div>
+                    <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
+                        <a href="https://drivelocal-agent-ui-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">
+                            Démo en ligne (Railway) &rarr;
+                        </a>
+                        <a href="https://github.com/johnplt/drivelocal-agent.git" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white flex items-center gap-1">
+                            Code source GitHub &rarr;
+                        </a>
                     </div>
                 </article>
             </div>
@@ -292,3 +290,31 @@
     </footer>
 
 </body>
+
+<script>
+    function openModal(id) {
+        const modal = document.getElementById(id);
+        if (modal) {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeModal(id) {
+        const modal = document.getElementById(id);
+        if (modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    // Fermeture avec la touche Échap (ESC)
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            document.querySelectorAll('[id^="modal-"]').forEach(modal => {
+                modal.style.display = 'none';
+            });
+            document.body.style.overflow = 'auto';
+        }
+    });
+</script>
