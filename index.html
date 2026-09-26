@@ -72,7 +72,7 @@
             <!-- En-tête / Pitch de présentation du Portfolio -->
             <div class="mb-12 p-8 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-800/80 to-slate-900 border border-brand-500/30 shadow-xl space-y-4">
                 <p class="text-lg font-semibold text-white leading-relaxed">
-                    « Ces projets sont nés d'une volonté simple : expérimenter l'IA appliquée à des problèmes du quotidien, en concevant des architectures légères, utiles et directement déployables. »
+                    « Ces projets sont nés d'une volonté simple : concevoir des solutions d'IA appliquées à des problèmes du quotidien, en concevant des architectures légères, utiles et directement déployables. »
                 </p>
                 <p class="text-slate-300 text-sm leading-relaxed">
                     Chaque application explore un cas d'usage concret où la donnée apporte une valeur mesurable — qu'il s'agisse d'améliorer et automatiser la qualification du support/service client (<strong>StreamChat NLP</strong>), d'optimiser la recherche sous contrainte de budget (<strong>DriveLocal</strong>), ou de fluidifier l'accès à la culture par la recommandation sémantique (<strong>CineMind</strong>). L'objectif : adopter une démarche pragmatique, fondée sur des architectures légères, simples à déployer et adaptées aux phases d'expérimentation.
@@ -160,6 +160,28 @@
                             <li><strong>Pragmatique & Économique :</strong> Alternative sobre aux APIs LLM payantes, optimisée pour minimiser les coûts d'infrastructure et l'empreinte carbone.</li>
                             <li><strong>Industrialisation Modernisée :</strong> Environnement géré via <strong><code>uv</code></strong> (Rust-based packaging), conteneurisation Docker et CI/CD automatisée sous GitHub Actions.</li>
                         </ul>
+                    </div>
+                    <!-- VIGNETTE INTÉGRÉE -->
+                    <div class="pt-2">
+                        <button onclick="openModal('modal-streamchatnlp')" class="group relative w-full rounded-xl overflow-hidden border border-slate-700/80 hover:border-brand-500/50 transition duration-300 block text-left bg-slate-900/60">
+                            <img src="img/streamchatnlp_image.jpg" alt="Schéma d'architecture StreamChatNLP" class="w-full h-32 object-cover object-top opacity-70 group-hover:opacity-100 group-hover:scale-105 transition duration-300" />
+                            <div class="absolute inset-0 bg-slate-950/50 group-hover:bg-slate-950/30 flex items-center justify-center transition">
+                                <span class="text-xs font-semibold text-white bg-slate-900/90 border border-slate-700 group-hover:border-brand-500/50 px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-2 transition">
+                                    <svg class="w-3.5 h-3.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                                    Agrandir le schéma d'architecture
+                                </span>
+                            </div>
+                        </button>
+                    </div>
+                    <!-- MODALE POPUP (Masquée par défaut) -->
+                    <div id="modal-streamchatnlp" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6" onclick="closeModal('modal-streamchatnlp')">
+                        <div class="max-w-5xl w-full bg-slate-900 border border-slate-700/80 rounded-2xl p-3 sm:p-4 relative shadow-2xl space-y-3" onclick="event.stopPropagation()">
+                            <div class="flex justify-between items-center px-2 pt-1">
+                                <h4 class="text-sm font-semibold text-slate-300">StreamChatNLP — Architecture Système</h4>
+                                <button onclick="closeModal('modal-streamchatnlp')" class="text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 px-2.5 py-1 rounded-lg text-xs transition">✕ Fermer</button>
+                            </div>
+                            <img src="img/streamchatnlp_image.jpg" alt="Schéma d'architecture StreamChatNLP" class="w-full h-auto rounded-xl border border-slate-800" />
+                        </div>
                     </div>                
                     <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
                         <a href="https://streamchatnlp-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">
