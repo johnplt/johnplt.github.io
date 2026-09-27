@@ -65,192 +65,273 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="space-y-8">
+        <section id="projects" class="space-y-12">
             <div class="border-b border-slate-800 pb-4">
-                <h2 class="text-2xl font-bold text-white">Projets phares</h2>
+                <h2 class="text-2xl font-bold text-white">Projets</h2>
             </div>
+        
             <!-- En-tête / Pitch de présentation du Portfolio -->
-            <div class="mb-12 p-8 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-800/80 to-slate-900 border border-brand-500/30 shadow-xl space-y-4">
+            <div class="p-8 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-800/80 to-slate-900 border border-brand-500/30 shadow-xl space-y-4">
                 <p class="text-lg font-semibold text-white leading-relaxed">
-                    « Ces projets sont nés d'une volonté simple : concevoir des solutions d'IA appliquées à des problèmes du quotidien, en concevant des architectures légères, utiles et directement déployables. »
+                    « Concevoir des architectures légères, utiles et directement déployables, tout en résolvant des problèmes métiers mesurables. »
                 </p>
                 <p class="text-slate-300 text-sm leading-relaxed">
-                    Chaque application explore un cas d'usage concret où la donnée apporte une valeur mesurable — qu'il s'agisse d'améliorer et automatiser la qualification du support/service client (<strong>StreamChat NLP</strong>), d'optimiser la recherche sous contrainte de budget (<strong>DriveLocal</strong>), ou de fluidifier l'accès à la culture par la recommandation sémantique (<strong>CineMind</strong>). L'objectif : adopter une démarche pragmatique, fondée sur des architectures légères, simples à déployer et adaptées aux phases d'expérimentation.
+                    Ce portfolio est articulé en deux volets : d'un côté, des <strong>applications full-stack déployées en production</strong> (API, bases vectorielles, IA, RAG, LLL, MLOps) ; de l'autre, des <strong>études de cas Data Science de bout en bout</strong> centrées sur les méthodes Machine Learning (regression/classification).
                 </p>
             </div>
-
-            <div class="grid grid-cols-1 gap-8">
-                <!-- CineMind Project Card -->
-                <article class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-brand-500/50 transition space-y-6">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                        <h3 class="text-xl font-bold text-white">CineMind — Moteur de Recommandation RAG</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Python</span>
-                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">PostgreSQL / pgvector</span>
-                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Streamlit</span>
-                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">uv</span>
-                        </div>
-                    </div>
-
-                    <p class="text-slate-300 leading-relaxed text-sm">
-                        Application de recommandation de films basée sur la recherche de similarité vectorielle en langage naturel.
-                    </p>
-
-                    <div class="space-y-3 text-sm text-slate-400">
-                        <p class="font-semibold text-slate-200">Points clés de l'architecture :</p>
-                        <ul class="list-disc list-inside space-y-1.5 pl-2">
-                            <li>Vectorisation des synopsis via embeddings 384 dimensions (<code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-brand-500">all-MiniLM-L6-v2</code>).</li>
-                            <li>Stockage et indexation haute performance avec <code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-brand-500">pgvector</code> et index HNSW.</li>
-                            <li>Déploiement managé sur **Railway** avec réseau privé consolidé (<code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-slate-300">.railway.internal</code>).</li>
-                            <li>Gestion de l'environnement Python optimisée avec <code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-slate-300">uv</code>.</li>
-                        </ul>
-                    </div>
-                    <!-- VIGNETTE INTÉGRÉE -->
-                    <div class="pt-2">
-                        <button onclick="openModal('modal-cinemind')" class="group relative w-full rounded-xl overflow-hidden border border-slate-700/80 hover:border-brand-500/50 transition duration-300 block text-left bg-slate-900/60">
-                            <img src="img/cinemind_image.jpg" alt="Schéma d'architecture Cinemind" class="w-full h-32 object-cover object-top opacity-70 group-hover:opacity-100 group-hover:scale-105 transition duration-300" />
-                            <div class="absolute inset-0 bg-slate-950/50 group-hover:bg-slate-950/30 flex items-center justify-center transition">
-                                <span class="text-xs font-semibold text-white bg-slate-900/90 border border-slate-700 group-hover:border-brand-500/50 px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-2 transition">
-                                    <svg class="w-3.5 h-3.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
-                                    Agrandir le schéma d'architecture
-                                </span>
+        
+            <!-- ==================== SECTION 1 : SYSTEMES & PROD ==================== -->
+            <div class="space-y-6">
+                <div class="flex items-center gap-3">
+                    <span class="p-2 rounded-lg bg-brand-500/10 text-brand-500 border border-brand-500/20">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                    </span>
+                    <h3 class="text-xl font-bold text-white">1. Systèmes & Applications IA Déployées</h3>
+                </div>
+                <p class="text-slate-400 text-sm">Applications complètes conteneurisées et hébergées sur le cloud avec bases de données, pipelines d'embeddings et interfaces interactives.</p>
+            
+                <div class="grid grid-cols-1 gap-8">
+                    <!-- CineMind Project Card -->
+                    <article class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-brand-500/50 transition space-y-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <h4 class="text-lg font-bold text-white">CineMind — Moteur de Recommandation RAG</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Python</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">PostgreSQL / pgvector</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Streamlit</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">uv</span>
                             </div>
-                        </button>
-                    </div>
-                    <!-- MODALE POPUP (Masquée par défaut) -->
-                    <div id="modal-cinemind" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6" onclick="closeModal('modal-cinemind')">
-                        <div class="max-w-5xl w-full bg-slate-900 border border-slate-700/80 rounded-2xl p-3 sm:p-4 relative shadow-2xl space-y-3" onclick="event.stopPropagation()">
-                            <div class="flex justify-between items-center px-2 pt-1">
-                                <h4 class="text-sm font-semibold text-slate-300">Cinemind — Architecture Système</h4>
-                                <button onclick="closeModal('modal-cinemind')" class="text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 px-2.5 py-1 rounded-lg text-xs transition">✕ Fermer</button>
-                            </div>
-                            <img src="img/cinemind_image.jpg" alt="Schéma d'architecture Cinemind" class="w-full h-auto rounded-xl border border-slate-800" />
                         </div>
-                    </div>
-                    <div class="pt-2 flex gap-4 text-sm font-medium">
-                        <a href="https://cinemind-production-1a7d.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">
-                            Découvrir l'application &rarr;
-                        </a>
-                        <a href="https://github.com/johnplt/cinemind" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">
-                            Voir le code sur GitHub &rarr;
-                        </a>
-                    </div>
-                </article>
-                <!-- StreamChat NLP Card -->
-                <article class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-brand-500/50 transition space-y-6">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                        <h3 class="text-xl font-bold text-white">StreamChat NLP — Classification Multilingue Temps Réel & Batch</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Python / uv</span>
-                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Sentence-Transformers</span>
-                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">dbt / DuckDB</span>
-                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Streamlit / Railway</span>
-                        </div>
-                    </div>
-                
-                    <p class="text-slate-300 leading-relaxed text-sm">
-                        Plateforme MLOps permettant de catégoriser automatiquement des messages clients dans plus de 50 langues. Conçue pour offrir un traitement rapide et léger sur CPU, sans la latence ni les coûts des gros modèles de langage (LLMs).
-                    </p>
                     
-                    <div class="space-y-3 text-sm text-slate-400">
-                        <p class="font-semibold text-slate-200">Points clés de l'architecture :</p>
-                        <ul class="list-disc list-inside space-y-1.5 pl-2">
-                            <li><strong>Classification Zero-Shot :</strong> Modèle multilingue léger (<code>MiniLM-L12</code>) permettant d'ajouter ou modifier les catégories métiers à la volée sans aucun ré-entraînement.</li>
-                            <li><strong>Architecture Hybride (Batch & Online) :</strong> Mode temps réel pour les messages unitaires et pipeline <strong>dbt / DuckDB</strong> pour l'assainissement et la déduplication de volumes historiques.</li>
-                            <li><strong>Pragmatique & Économique :</strong> Alternative sobre aux APIs LLM payantes, optimisée pour minimiser les coûts d'infrastructure et l'empreinte carbone.</li>
-                            <li><strong>Industrialisation Modernisée :</strong> Environnement géré via <strong><code>uv</code></strong> (Rust-based packaging), conteneurisation Docker et CI/CD automatisée sous GitHub Actions.</li>
-                        </ul>
-                    </div>
-                    <!-- VIGNETTE INTÉGRÉE -->
-                    <div class="pt-2">
-                        <button onclick="openModal('modal-streamchatnlp')" class="group relative w-full rounded-xl overflow-hidden border border-slate-700/80 hover:border-brand-500/50 transition duration-300 block text-left bg-slate-900/60">
-                            <img src="img/streamchatnlp_image.jpg" alt="Schéma d'architecture StreamChatNLP" class="w-full h-32 object-cover object-top opacity-70 group-hover:opacity-100 group-hover:scale-105 transition duration-300" />
-                            <div class="absolute inset-0 bg-slate-950/50 group-hover:bg-slate-950/30 flex items-center justify-center transition">
-                                <span class="text-xs font-semibold text-white bg-slate-900/90 border border-slate-700 group-hover:border-brand-500/50 px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-2 transition">
-                                    <svg class="w-3.5 h-3.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
-                                    Agrandir le schéma d'architecture
-                                </span>
-                            </div>
-                        </button>
-                    </div>
-                    <!-- MODALE POPUP (Masquée par défaut) -->
-                    <div id="modal-streamchatnlp" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6" onclick="closeModal('modal-streamchatnlp')">
-                        <div class="max-w-5xl w-full bg-slate-900 border border-slate-700/80 rounded-2xl p-3 sm:p-4 relative shadow-2xl space-y-3" onclick="event.stopPropagation()">
-                            <div class="flex justify-between items-center px-2 pt-1">
-                                <h4 class="text-sm font-semibold text-slate-300">StreamChatNLP — Architecture Système</h4>
-                                <button onclick="closeModal('modal-streamchatnlp')" class="text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 px-2.5 py-1 rounded-lg text-xs transition">✕ Fermer</button>
-                            </div>
-                            <img src="img/streamchatnlp_image.jpg" alt="Schéma d'architecture StreamChatNLP" class="w-full h-auto rounded-xl border border-slate-800" />
+                        <p class="text-slate-300 leading-relaxed text-sm">
+                            Application de recommandation de films basée sur la recherche de similarité vectorielle en langage naturel.
+                        </p>
+                    
+                        <div class="space-y-3 text-sm text-slate-400">
+                            <p class="font-semibold text-slate-200">Points clés de l'architecture :</p>
+                            <ul class="list-disc list-inside space-y-1.5 pl-2">
+                                <li>Vectorisation des synopsis via embeddings 384 dimensions (<code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-brand-500">all-MiniLM-L6-v2</code>).</li>
+                                <li>Stockage et indexation haute performance avec <code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-brand-500">pgvector</code> et index HNSW.</li>
+                                <li>Déploiement managé sur <strong>Railway</strong> avec réseau privé consolidé (<code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-slate-300">.railway.internal</code>).</li>
+                                <li>Gestion de l'environnement Python optimisée avec <code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-slate-300">uv</code>.</li>
+                            </ul>
                         </div>
-                    </div>                
-                    <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
-                        <a href="https://streamchatnlp-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">
-                            Démo en ligne (Railway) &rarr;
-                        </a>
-                        <a href="https://github.com/johnplt/stream_chat_nlp" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white flex items-center gap-1">
-                            Code source GitHub &rarr;
-                        </a>
-                    </div>
-                </article>
-                <!-- DriveLocal Project Card -->
-                <article class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-brand-500/50 transition space-y-6">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                        <h3 class="text-xl font-bold text-white">DriveLocal — Agent IA d'Arbitrage & Recherche Sémantique SaaS</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Python / uv</span>
-                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">FastAPI</span>
-                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">PostgreSQL / pgvector</span>
-                            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Streamlit / Docker</span>
+                    
+                        <div class="pt-2">
+                            <button onclick="openModal('modal-cinemind')" class="group relative w-full rounded-xl overflow-hidden border border-slate-700/80 hover:border-brand-500/50 transition duration-300 block text-left bg-slate-900/60">
+                                <img src="img/cinemind_image.jpg" alt="Schéma d'architecture Cinemind" class="w-full h-32 object-cover object-top opacity-70 group-hover:opacity-100 group-hover:scale-105 transition duration-300" />
+                                <div class="absolute inset-0 bg-slate-950/50 group-hover:bg-slate-950/30 flex items-center justify-center transition">
+                                    <span class="text-xs font-semibold text-white bg-slate-900/90 border border-slate-700 group-hover:border-brand-500/50 px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-2 transition">
+                                        <svg class="w-3.5 h-3.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                                        Agrandir le schéma d'architecture
+                                    </span>
+                                </div>
+                            </button>
                         </div>
-                    </div>
+                    
+                        <div id="modal-cinemind" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6" onclick="closeModal('modal-cinemind')">
+                            <div class="max-w-5xl w-full bg-slate-900 border border-slate-700/80 rounded-2xl p-3 sm:p-4 relative shadow-2xl space-y-3" onclick="event.stopPropagation()">
+                                <div class="flex justify-between items-center px-2 pt-1">
+                                    <h4 class="text-sm font-semibold text-slate-300">Cinemind — Architecture Système</h4>
+                                    <button onclick="closeModal('modal-cinemind')" class="text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 px-2.5 py-1 rounded-lg text-xs transition">✕ Fermer</button>
+                                </div>
+                                <img src="img/cinemind_image.jpg" alt="Schéma d'architecture Cinemind" class="w-full h-auto rounded-xl border border-slate-800" />
+                            </div>
+                        </div>
+                    
+                        <div class="pt-2 flex gap-4 text-sm font-medium">
+                            <a href="https://cinemind-production-1a7d.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">Découvrir l'application &rarr;</a>
+                            <a href="https://github.com/johnplt/cinemind" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">Voir le code sur GitHub &rarr;</a>
+                        </div>
+                    </article>
                 
-                    <p class="text-slate-300 leading-relaxed text-sm">
-                        Plateforme SaaS de recherche de véhicules de location permettant d'aligner les intentions exprimées en langage naturel avec les contraintes budgétaires réelles. Un agent d'arbitrage ajuste dynamiquement les options de réservation en cas de dépassement.
-                    </p>
-                
-                    <div class="space-y-3 text-sm text-slate-400">
-                        <p class="font-semibold text-slate-200">Points clés de l'architecture :</p>
-                        <ul class="list-disc list-inside space-y-1.5 pl-2">
-                            <li><strong>Recherche Vectorielle Multilingue :</strong> Embeddings <code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-brand-500">MiniLM-L12</code> couplés à <code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-brand-500">pgvector</code> pour apparier les besoins clients avec la flotte disponible.</li>
-                            <li><strong>Moteur d'Arbitrage Métier :</strong> Logique décisionnelle embarquée analysant l'écart budgétaire pour proposer automatiquement des alternatives économiques (retrait d'options, surclassement négocié).</li>
-                            <li><strong>Architecture Microservices :</strong> Découplage complet API (FastAPI) et Frontend (Streamlit) conteneurisés indépendamment sous Docker.</li>
-                            <li><strong>Déploiement Cloud & Auto-Seeding :</strong> Pipeline hébergé sur Railway avec initialisation automatique du schéma SQL et injection des embeddings au démarrage.</li>
-                        </ul>
-                    </div>
-                    <!-- VIGNETTE INTÉGRÉE -->
-                    <div class="pt-2">
-                        <button onclick="openModal('modal-drivelocal')" class="group relative w-full rounded-xl overflow-hidden border border-slate-700/80 hover:border-brand-500/50 transition duration-300 block text-left bg-slate-900/60">
-                            <img src="img/drivelocal_image.jpg" alt="Schéma d'architecture DriveLocal" class="w-full h-32 object-cover object-top opacity-70 group-hover:opacity-100 group-hover:scale-105 transition duration-300" />
-                            <div class="absolute inset-0 bg-slate-950/50 group-hover:bg-slate-950/30 flex items-center justify-center transition">
-                                <span class="text-xs font-semibold text-white bg-slate-900/90 border border-slate-700 group-hover:border-brand-500/50 px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-2 transition">
-                                    <svg class="w-3.5 h-3.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
-                                    Agrandir le schéma d'architecture
-                                </span>
+                    <!-- StreamChat NLP Card -->
+                    <article class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-brand-500/50 transition space-y-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <h4 class="text-lg font-bold text-white">StreamChat NLP — Classification Multilingue Temps Réel & Batch</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Python / uv</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Sentence-Transformers</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">dbt / DuckDB</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Streamlit / Railway</span>
                             </div>
-                        </button>
-                    </div>
-                    <!-- MODALE POPUP (Masquée par défaut) -->
-                    <div id="modal-drivelocal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6" onclick="closeModal('modal-drivelocal')">
-                        <div class="max-w-5xl w-full bg-slate-900 border border-slate-700/80 rounded-2xl p-3 sm:p-4 relative shadow-2xl space-y-3" onclick="event.stopPropagation()">
-                            <div class="flex justify-between items-center px-2 pt-1">
-                                <h4 class="text-sm font-semibold text-slate-300">DriveLocal — Architecture Système</h4>
-                                <button onclick="closeModal('modal-drivelocal')" class="text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 px-2.5 py-1 rounded-lg text-xs transition">✕ Fermer</button>
-                            </div>
-                            <img src="img/drivelocal_image.jpg" alt="Schéma d'architecture DriveLocal" class="w-full h-auto rounded-xl border border-slate-800" />
                         </div>
-                    </div>
-                    <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
-                        <a href="https://drivelocal-agent-ui-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">
-                            Démo en ligne (Railway) &rarr;
-                        </a>
-                        <a href="https://github.com/johnplt/drivelocal-agent.git" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white flex items-center gap-1">
-                            Code source GitHub &rarr;
-                        </a>
-                    </div>
-                </article>
+
+                        <p class="text-slate-300 leading-relaxed text-sm">
+                            Plateforme MLOps permettant de catégoriser automatiquement des messages clients dans plus de 50 langues. Conçue pour offrir un traitement rapide et léger sur CPU, sans la latence ni les coûts des gros modèles de langage (LLMs).
+                        </p>
+
+                        <div class="space-y-3 text-sm text-slate-400">
+                            <p class="font-semibold text-slate-200">Points clés de l'architecture :</p>
+                            <ul class="list-disc list-inside space-y-1.5 pl-2">
+                                <li><strong>Classification Zero-Shot :</strong> Modèle multilingue léger (<code>MiniLM-L12</code>) permettant d'ajouter ou modifier les catégories métiers à la volée sans aucun ré-entraînement.</li>
+                                <li><strong>Architecture Hybride (Batch & Online) :</strong> Mode temps réel pour les messages unitaires et pipeline <strong>dbt / DuckDB</strong> pour l'assainissement et la déduplication de volumes historiques.</li>
+                                <li><strong>Pragmatique & Économique :</strong> Alternative sobre aux APIs LLM payantes, optimisée pour minimiser les coûts d'infrastructure.</li>
+                                <li><strong>Industrialisation Modernisée :</strong> Environnement géré via <strong><code>uv</code></strong>, conteneurisation Docker et CI/CD automatisée sous GitHub Actions.</li>
+                            </ul>
+                        </div>
+                    
+                        <div class="pt-2">
+                            <button onclick="openModal('modal-streamchatnlp')" class="group relative w-full rounded-xl overflow-hidden border border-slate-700/80 hover:border-brand-500/50 transition duration-300 block text-left bg-slate-900/60">
+                                <img src="img/streamchatnlp_image.jpg" alt="Schéma d'architecture StreamChatNLP" class="w-full h-32 object-cover object-top opacity-70 group-hover:opacity-100 group-hover:scale-105 transition duration-300" />
+                                <div class="absolute inset-0 bg-slate-950/50 group-hover:bg-slate-950/30 flex items-center justify-center transition">
+                                    <span class="text-xs font-semibold text-white bg-slate-900/90 border border-slate-700 group-hover:border-brand-500/50 px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-2 transition">
+                                        <svg class="w-3.5 h-3.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                                        Agrandir le schéma d'architecture
+                                    </span>
+                                </div>
+                            </button>
+                        </div>
+                    
+                        <div id="modal-streamchatnlp" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6" onclick="closeModal('modal-streamchatnlp')">
+                            <div class="max-w-5xl w-full bg-slate-900 border border-slate-700/80 rounded-2xl p-3 sm:p-4 relative shadow-2xl space-y-3" onclick="event.stopPropagation()">
+                                <div class="flex justify-between items-center px-2 pt-1">
+                                    <h4 class="text-sm font-semibold text-slate-300">StreamChatNLP — Architecture Système</h4>
+                                    <button onclick="closeModal('modal-streamchatnlp')" class="text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 px-2.5 py-1 rounded-lg text-xs transition">✕ Fermer</button>
+                                </div>
+                                <img src="img/streamchatnlp_image.jpg" alt="Schéma d'architecture StreamChatNLP" class="w-full h-auto rounded-xl border border-slate-800" />
+                            </div>
+                        </div>
+
+                        <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
+                            <a href="https://streamchatnlp-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">Démo en ligne (Railway) &rarr;</a>
+                            <a href="https://github.com/johnplt/stream_chat_nlp" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white flex items-center gap-1">Code source GitHub &rarr;</a>
+                        </div>
+                    </article>
+                
+                    <!-- DriveLocal Project Card -->
+                    <article class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-brand-500/50 transition space-y-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <h4 class="text-lg font-bold text-white">DriveLocal — Agent IA d'Arbitrage & Recherche Sémantique SaaS</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Python / uv</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">FastAPI</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">PostgreSQL / pgvector</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Streamlit / Docker</span>
+                            </div>
+                        </div>
+
+                        <p class="text-slate-300 leading-relaxed text-sm">
+                            Plateforme SaaS de recherche de véhicules de location permettant d'aligner les intentions exprimées en langage naturel avec les contraintes budgétaires réelles.
+                        </p>
+
+                        <div class="space-y-3 text-sm text-slate-400">
+                            <p class="font-semibold text-slate-200">Points clés de l'architecture :</p>
+                            <ul class="list-disc list-inside space-y-1.5 pl-2">
+                                <li><strong>Recherche Vectorielle Multilingue :</strong> Embeddings <code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-brand-500">MiniLM-L12</code> couplés à <code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-brand-500">pgvector</code>.</li>
+                                <li><strong>Moteur d'Arbitrage Métier :</strong> Logique décisionnelle embarquée analysant l'écart budgétaire pour proposer des alternatives économiques.</li>
+                                <li><strong>Architecture Microservices :</strong> Découplage complet API (FastAPI) et Frontend (Streamlit) conteneurisés indépendamment sous Docker.</li>
+                                <li><strong>Déploiement Cloud & Auto-Seeding :</strong> Pipeline hébergé sur Railway avec initialisation automatique du schéma SQL.</li>
+                            </ul>
+                        </div>
+                    
+                        <div class="pt-2">
+                            <button onclick="openModal('modal-drivelocal')" class="group relative w-full rounded-xl overflow-hidden border border-slate-700/80 hover:border-brand-500/50 transition duration-300 block text-left bg-slate-900/60">
+                                <img src="img/drivelocal_image.jpg" alt="Schéma d'architecture DriveLocal" class="w-full h-32 object-cover object-top opacity-70 group-hover:opacity-100 group-hover:scale-105 transition duration-300" />
+                                <div class="absolute inset-0 bg-slate-950/50 group-hover:bg-slate-950/30 flex items-center justify-center transition">
+                                    <span class="text-xs font-semibold text-white bg-slate-900/90 border border-slate-700 group-hover:border-brand-500/50 px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-2 transition">
+                                        <svg class="w-3.5 h-3.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                                        Agrandir le schéma d'architecture
+                                    </span>
+                                </div>
+                            </button>
+                        </div>
+                    
+                        <div id="modal-drivelocal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6" onclick="closeModal('modal-drivelocal')">
+                            <div class="max-w-5xl w-full bg-slate-900 border border-slate-700/80 rounded-2xl p-3 sm:p-4 relative shadow-2xl space-y-3" onclick="event.stopPropagation()">
+                                <div class="flex justify-between items-center px-2 pt-1">
+                                    <h4 class="text-sm font-semibold text-slate-300">DriveLocal — Architecture Système</h4>
+                                    <button onclick="closeModal('modal-drivelocal')" class="text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 px-2.5 py-1 rounded-lg text-xs transition">✕ Fermer</button>
+                                </div>
+                                <img src="img/drivelocal_image.jpg" alt="Schéma d'architecture DriveLocal" class="w-full h-auto rounded-xl border border-slate-800" />
+                            </div>
+                        </div>
+                    
+                        <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
+                            <a href="https://drivelocal-agent-ui-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">Démo en ligne (Railway) &rarr;</a>
+                            <a href="https://github.com/johnplt/drivelocal-agent.git" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white flex items-center gap-1">Code source GitHub &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        
+            <!-- ==================== SECTION 2 : DATA SCIENCE ==================== -->
+            <div class="space-y-6 pt-6">
+                <div class="flex items-center gap-3">
+                    <span class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </span>
+                    <h3 class="text-xl font-bold text-white">2. Data Science & Impact métier (End-to-End)</h3>
+                </div>
+                <p class="text-slate-400 text-sm">Études de cas en Data Science : ingénierie de variables, benchmarking d'algorithmes et optimisation de seuils décisionnels pour la détection et la prévision.</p>
+            
+                <div class="grid grid-cols-1 gap-8">
+                    <!-- Project DS 1 : Demand Forecasting -->
+                    <article class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-emerald-500/50 transition space-y-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <h4 class="text-lg font-bold text-white">Prévision de la demande & optimisation des stocks (Supply Chain)</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Python / uv</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">LightGBM</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">SHAP</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Streamlit / CI-CD</span>
+                            </div>
+                        </div>
+                    
+                        <p class="text-slate-300 leading-relaxed text-sm">
+                            Modèle d'optimisation de stock visant à minimiser le coût financier global (arbitrage invendus vs ruptures).
+                        </p>
+                    
+                        <div class="space-y-3 text-sm text-slate-400">
+                            <p class="font-semibold text-slate-200">Points clés de la démarche :</p>
+                            <ul class="list-disc list-inside space-y-1.5 pl-2">
+                                <li><strong>Feature Engineering temporel :</strong> Création de lags et variables glissantes sans fuite de données (<em>Data Leakage</em>).</li>
+                                <li><strong>Modélisation & Benchmarking :</strong> Comparaison d'un modèle <strong>LightGBM</strong> par rapport à une baseline de moyenne mobile.</li>
+                                <li><strong>Explicabilité métier :</strong> Interprétation fine des facteurs d'influence (saisonnalité, promotions) via <strong>SHAP values</strong>.</li>
+                                <li><strong>Simulateur financier :</strong> Dashboard interactif calculant le stock de sécurité (<em>Safety Stock Buffer</em>) optimal pour maximiser le gain net en euros.</li>
+                            </ul>
+                        </div>
+                    
+                        <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
+                            <a href="https://projectdemandforecasting-production.up.railway.app" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 flex items-center gap-1">Simulateur en ligne &rarr;</a>
+                            <a href="https://github.com/johnplt/project_demand_forecasting" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white flex items-center gap-1">Code source GitHub &rarr;</a>
+                        </div>
+                    </article>
+                
+                    <!-- Project DS 2 : Anomalies -->
+                    <article class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700/60 hover:border-emerald-500/50 transition space-y-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <h4 class="text-lg font-bold text-white">AnomalyEngine — Détection d'anomalies & arbitrage financier</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Python / uv</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Scikit-Learn</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">XGBoost / Isolation Forest</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">SHAP</span>
+                            </div>
+                        </div>
+                    
+                        <p class="text-slate-300 leading-relaxed text-sm">
+                            Modèle de détection d'anomalies multi-domaines (Fintech, IoT, SaaS) orienté sur l'optimisation financière du seuil de décision (arbitrage fausses alertes vs anomalies manquées).
+                        </p>
+                    
+                        <div class="space-y-3 text-sm text-slate-400">
+                            <p class="font-semibold text-slate-200">Points clés de la démarche :</p>
+                            <ul class="list-disc list-inside space-y-1.5 pl-2">
+                                <li><strong>Feature Engineering & Prétraitement :</strong> Calcul de métriques glissantes, de volatilité et d'écarts aux comportements nominaux, adaptées à la détection de ruptures de comportement.</li>
+                                <li><strong>Modélisation & Benchmarking :</strong> Alignement du seuil de probabilité sur le coût réel d'un Faux Négatif (client perdu) vs Faux Positif (campagne inutile).</li>
+                                <li><strong>Explicabilité globale & locale :</strong> Analyse fine des facteurs déclencheurs d'alertes via SHAP values (Beeswarm plot global et Waterfall plots comparatifs sur cas sains vs anormaux).</li>
+                                <li><strong>Arbitrage coût/seuil :</strong> Simulation interactive recherchant le seuil de probabilité optimal minimisant la matrice de coûts métier pour maximiser le gain net.</li>
+                            </ul>
+                        </div>
+                    
+                        <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
+                            <a href="https://anomaly-engine-production-123f.up.railway.app" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 flex items-center gap-1">Démo interactive &rarr;</a>
+                            <a href="https://github.com/johnplt/anomaly-engine" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white flex items-center gap-1">Code source GitHub &rarr;</a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
-
         <!-- Skills Section -->
         <section id="skills" class="space-y-8">
             <div class="border-b border-slate-800 pb-4">
