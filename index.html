@@ -77,7 +77,7 @@
                 </p>
                 <p class="text-slate-300 text-sm leading-relaxed">
                     Ce portfolio est articulé en deux volets : d'un côté, des <strong>applications full-stack déployées en production</strong> (API, bases vectorielles, IA, RAG, LLM, MLOps) ; de l'autre, des <strong>études de cas Data Science de bout en bout</strong> centrées sur les méthodes Machine Learning (regression/classification).
-                    Chaque projet repose sur des <strong>jeux de données publics ou synthétiques</strong> , conteneurisé via Docker et déployé sur une infrastructure agnostique (Railway) pour garantir une reproductibilité totale, une isolation stricte des dépendances et une maîtrise optimale des coûts d'hébergement.
+                    Chaque projet repose sur des <strong>jeux de données publics ou synthétiques</strong> , conteneurisé via Docker et déployé sur une infrastructure Cloud agnostique pour garantir une reproductibilité totale, une isolation stricte des dépendances et une maîtrise optimale des coûts d'hébergement.
                 </p>
             </div>
         
@@ -113,7 +113,7 @@
                             <ul class="list-disc list-inside space-y-1.5 pl-2">
                                 <li>Vectorisation des synopsis via embeddings 384 dimensions (<code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-brand-500">all-MiniLM-L6-v2</code>).</li>
                                 <li>Stockage et indexation haute performance avec <code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-brand-500">pgvector</code> et index HNSW.</li>
-                                <li>Déploiement managé sur <strong>Railway</strong> avec réseau privé consolidé (<code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-slate-300">.railway.internal</code>).</li>
+                                <li>Déploiement managé sur <strong>le cloud</strong> avec réseau privé consolidé (<code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-slate-300">.railway.internal</code>).</li>
                                 <li>Gestion de l'environnement Python optimisée avec <code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-slate-300">uv</code>.</li>
                             </ul>
                         </div>
@@ -154,7 +154,7 @@
                                 <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Python / uv</span>
                                 <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Sentence-Transformers</span>
                                 <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">dbt / DuckDB</span>
-                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Streamlit / Railway</span>
+                                <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20">Streamlit / Cloud</span>
                             </div>
                         </div>
 
@@ -195,7 +195,7 @@
                         </div>
 
                         <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
-                            <a href="https://streamchatnlp.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">Démo en ligne (Railway) &rarr;</a>
+                            <a href="https://streamchatnlp.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">Démo en ligne (Cloud) &rarr;</a>
                             <a href="https://github.com/johnplt/stream_chat_nlp" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white flex items-center gap-1">Code source GitHub &rarr;</a>
                         </div>
                     </article>
@@ -222,7 +222,7 @@
                                 <li><strong>Recherche Vectorielle Multilingue :</strong> Embeddings <code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-brand-500">MiniLM-L12</code> couplés à <code class="text-xs bg-slate-900 px-1 py-0.5 rounded text-brand-500">pgvector</code>.</li>
                                 <li><strong>Moteur d'Arbitrage Métier :</strong> Logique décisionnelle embarquée analysant l'écart budgétaire pour proposer des alternatives économiques.</li>
                                 <li><strong>Architecture Microservices :</strong> Découplage complet API (FastAPI) et Frontend (Streamlit) conteneurisés indépendamment sous Docker.</li>
-                                <li><strong>Déploiement Cloud & Auto-Seeding :</strong> Pipeline hébergé sur Railway avec initialisation automatique du schéma SQL.</li>
+                                <li><strong>Déploiement Cloud & Auto-Seeding :</strong> Pipeline hébergé sur un environnement Cloud avec initialisation automatique du schéma SQL.</li>
                             </ul>
                         </div>
                     
@@ -249,7 +249,7 @@
                         </div>
                     
                         <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
-                            <a href="https://drivelocal-agent-ui.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">Démo en ligne (Railway) &rarr;</a>
+                            <a href="https://drivelocal-agent-ui.up.railway.app/" target="_blank" rel="noopener noreferrer" class="text-brand-500 hover:text-brand-600 flex items-center gap-1">Démo en ligne (Cloud) &rarr;</a>
                             <a href="https://github.com/johnplt/drivelocal-agent.git" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white flex items-center gap-1">Code source GitHub &rarr;</a>
                         </div>
                     </article>
@@ -294,7 +294,7 @@
                         </div>
                     
                         <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
-                            <a href="https://demandforecasting.up.railway.app" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 flex items-center gap-1">Simulateur en ligne &rarr;</a>
+                            <a href="https://project-demand-forecasting.onrender.com" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 flex items-center gap-1">Simulateur en ligne &rarr;</a>
                             <a href="https://github.com/johnplt/project_demand_forecasting" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white flex items-center gap-1">Code source GitHub &rarr;</a>
                         </div>
                     </article>
@@ -326,7 +326,7 @@
                         </div>
                     
                         <div class="pt-2 flex flex-wrap gap-4 text-sm font-medium">
-                            <a href="https://anomaly-engine.up.railway.app" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 flex items-center gap-1">Démo interactive &rarr;</a>
+                            <a href="https://anomaly-engine-nfr2.onrender.com" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 flex items-center gap-1">Démo interactive &rarr;</a>
                             <a href="https://github.com/johnplt/anomaly-engine" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white flex items-center gap-1">Code source GitHub &rarr;</a>
                         </div>
                     </article>
@@ -369,7 +369,7 @@
                         <h3 class="font-semibold text-white">MLOps, Tooling & Deploy</h3>
                     </div>
                     <p class="text-sm text-slate-400 leading-relaxed">
-                        Python (Expert), Docker, uv, Git / GitLab-CI, Streamlit, Déploiement Cloud (Railway), API REST.
+                        Python (Expert), Docker, uv, Git / GitLab-CI, Streamlit, Déploiement Cloud, API REST.
                     </p>
                 </div>
             </div>
